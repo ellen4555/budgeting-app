@@ -1,0 +1,60 @@
+.transaction-container {
+  width: 80%;
+  margin: 40px auto;
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.transaction-container h2 {
+  color: #2563eb;
+  margin-bottom: 20px;
+}
+
+.transaction-container ul {
+  list-style: none;
+  padding: 0;
+}
+
+.transaction-container li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+}
+
+.income-item {
+  border-left: 6px solid #22c55e;
+  background: #f0fdf4;
+}
+
+.expense-item {
+  border-left: 6px solid #ef4444;
+  background: #fef2f2;
+}
+
+.transaction-container span {
+  font-size: 20px;
+  font-weight: bold;
+}
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.delete-btn {
+  background: #ef4444;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  background: #dc2626;
+}
