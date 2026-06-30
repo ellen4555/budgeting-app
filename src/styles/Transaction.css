@@ -1,15 +1,17 @@
 .transaction-container {
-  width: 80%;
+  width: 100%;
+  max-width: 700px;
   margin: 40px auto;
   background: white;
   padding: 25px;
   border-radius: 15px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
 .transaction-container h2 {
   color: #2563eb;
   margin-bottom: 20px;
+  text-align: center;
 }
 
 .transaction-container ul {
@@ -21,6 +23,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 15px;
   padding: 15px;
   margin-bottom: 15px;
   border-radius: 10px;
@@ -36,25 +39,107 @@
   background: #fef2f2;
 }
 
-.transaction-container span {
-  font-size: 20px;
-  font-weight: bold;
+.transaction-container h3 {
+  margin-bottom: 5px;
 }
+
+.transaction-container p {
+  margin: 4px 0;
+  color: #555;
+}
+
+.transaction-container small {
+  color: #777;
+}
+
 .actions {
   display: flex;
   align-items: center;
   gap: 15px;
 }
 
+.actions span {
+  font-size: 20px;
+  font-weight: bold;
+}
+
 .delete-btn {
   background: #ef4444;
   color: white;
   border: none;
-  padding: 8px 15px;
+  padding: 10px 16px;
   border-radius: 8px;
   cursor: pointer;
+  transition: 0.3s;
 }
 
 .delete-btn:hover {
   background: #dc2626;
+}
+
+/* ---------- Tablet ---------- */
+
+@media (max-width: 992px) {
+  .transaction-container {
+    max-width: 650px;
+  }
+}
+
+/* ---------- Mobile ---------- */
+
+@media (max-width: 768px) {
+  .transaction-container {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .transaction-container li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .actions {
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+
+  .actions span {
+    font-size: 18px;
+  }
+
+  .delete-btn {
+    width: auto;
+    padding: 10px 18px;
+  }
+}
+
+/* ---------- Small Mobile ---------- */
+
+@media (max-width: 480px) {
+  .transaction-container {
+    padding: 18px;
+  }
+
+  .transaction-container h2 {
+    font-size: 22px;
+  }
+
+  .transaction-container h3 {
+    font-size: 18px;
+  }
+
+  .actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .actions span {
+    text-align: left;
+  }
+
+  .delete-btn {
+    width: 100%;
+  }
 }
